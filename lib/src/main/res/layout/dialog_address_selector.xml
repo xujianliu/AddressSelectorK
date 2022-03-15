@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="8dip"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingLeft="5.0dip"
+            android:paddingTop="2.dip"
+            android:paddingRight="5.0dip"
+            android:paddingBottom="2.0dip"
+            android:text="@string/btn_close"
+            android:textColor="#585758"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="20.0dip"
+            android:text="@string/title_select"
+            android:textColor="#585758"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dip"
+            android:layout_marginRight="10dip"
+            android:background="?selectableItemBackground"
+            android:paddingLeft="5.0dip"
+            android:paddingTop="2.dip"
+            android:paddingRight="5.0dip"
+            android:paddingBottom="2.0dip"
+            android:text="@string/btn_confirm"
+            android:textColor="#585758"
+            android:textSize="16sp" />
+
+        <com.mook.addressselector.AsViewPagerIndicator
+            android:id="@+id/as_indicators"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:background="@drawable/bottom_shadow_bg" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/as_indicators" />
+
+    </RelativeLayout>
+
+</FrameLayout>
